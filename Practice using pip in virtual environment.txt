@@ -1,0 +1,29 @@
+pip list
+-shows what was installed in that current environment.
+-----------------------------------------------------------------------------------------------------------------------------------------
+deactivate (This will deactivate your virtual environment)
+-it deactivate the current environment you were using, the left side showing the environment is gone.
+-----------------------------------------------------------------------------------------------------------------------------------------
+pip3 list (How is the result different from when you ran pip list with the virtualenv activated? Hint, you should not have as many things listed when the virtualenv is deactivated. If your results are the same, go back and figure out what went wrong.)
+-gone back before the virtualenv was there, back to the orginal virtualenv and showed more the installed packages.
+-----------------------------------------------------------------------------------------------------------------------------------------
+source myEnvironments/py3Env/bin/activate (Adjust the path as needed to re-activate the virtualenv; for windows call myEnvironments/py3Env/Scripts/activate)
+-calls back the environment it was on earlier and showing the left side environment you are currently on.
+-----------------------------------------------------------------------------------------------------------------------------------------
+pip install Django==1.11.9 (We know you already ran this one. What information do you see returned in terminal after this command?)
+-installing and downloading Django in this current virtualenv. Shows the downloading % and if it was successful or not.
+-----------------------------------------------------------------------------------------------------------------------------------------
+pip freeze (What's the difference between freeze and list?)
+-doesn't list all the package like the pip list but shows modules installed.
+First cd into your Desktop directory (cd ~/Desktop), then run this command: pip freeze > requirements.txt. What do you see when you ls? What's inside this file?
+-the requirements system of the updated version
+-----------------------------------------------------------------------------------------------------------------------------------------
+pip uninstall Django
+-it deleted/uninstall Django of whatever version was installed
+-----------------------------------------------------------------------------------------------------------------------------------------
+pip show Django
+-Django is not shown since it was uninstall
+-----------------------------------------------------------------------------------------------------------------------------------------
+pip search Flask This one might take a moment to execute.
+-shows configs of Flask-related
+-----------------------------------------------------------------------------------------------------------------------------------------

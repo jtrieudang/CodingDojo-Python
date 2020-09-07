@@ -1,0 +1,44 @@
+
+ Query: Create 3 new users
+>>>jimmy = User.objects.create(first_name='Jimmy', last_name='Trieudang', email_address='j@t.com',age='25')
+>>>harry = User.objects.create(first_name='Harry', last_name='Potter', email_address='p@t.com',age=18)
+>>>Hermonin = User.objects.create(first_name='Hermonin', last_name='Ginger', email_address='h@t.com',age=17)
+---------------------------------------------------------------------------
+ Query: Retrieve all the users
+>>> all_users = User.objects.all()
+>>> print(all_users)
+--------------------------------------------------------------------------
+ Query: Retrieve the last user
+>>> last_user = User.objects.last()
+>>> print(last_user)     
+User object (4)
+
+>>> print(last_user.first_name)
+Hermonin
+--------------------------------------------------------------------------
+ Query: Retrieve the first user
+>>> first_user = User.objects.first()  
+>>> print(first_user)
+User object (1)
+
+>>> print(first_user.first_name)
+Jimmy
+--------------------------------------------------------------------------
+ Query: Change the user with id=3 so their last name is Pancakes.
+>>> Hermonin.last_name = 'Pancakes'
+>>> Hermonin.save()
+--------------------------------------------------------------------------
+ Query: Delete the user with id=2 from the database
+>>>harry.delete()
+--------------------------------------------------------------------------
+ Query: Get all the users, sorted by their first name
+>>> all_users = User.objects.all()
+>>> print(all_users)
+<QuerySet [<User: User object (1)>, <User: User object (2)>, <User: User object (3)>, <User: User object (4)>]>
+>>> for User in all_users:
+...     print(user.first_name)
+--------------------------------------------------------------------------
+Filter
+>>> users_with_last_name_trieudang = User.objects.filter(last_name='Trieudang')
+>>> print(users_with_last_name_trieudang)
+<QuerySet [<User: User object (1)>, <User: User object (2)>]>
